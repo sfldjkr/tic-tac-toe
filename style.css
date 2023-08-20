@@ -1,0 +1,213 @@
+/* 
+#E27D60 
+#85DCB0
+#E8A87C
+#C38D9E
+#41B3A3
+
+
+*/
+
+* {
+    font-family: 'Work Sans', sans-serif;
+    letter-spacing: 3px;
+}
+
+body {
+    display: grid;
+    padding: 0px;
+    margin: 0px;
+    height:100vh;
+    grid-template-rows: 1fr 4fr;
+}
+
+img {
+    display: block;
+
+}
+
+.header {
+    text-align: center;
+    background-color: rgba(133, 220, 176,0.7);
+    font-weight: bolder;
+    display: grid;
+    align-items: center;
+    font-size: larger;
+    color: white;
+}
+
+#body {
+    background-color: #fffe7a;
+
+}
+
+#gameBoard {
+
+    margin: auto;
+    width:50%;
+    display: grid;
+    gap:5px;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr 1fr 1fr;
+ 
+    justify-content: center;
+    align-self: center;
+}
+
+#showanswer {
+    margin-top: 10px;
+    text-align: center;
+    width:90%;
+    margin:auto;
+    color:rgba(53, 57, 53,0.8);
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+}
+
+
+
+.indivisualDiv {
+    border: 1px solid grey;
+
+    padding:5px;
+    height: 7vh;
+    width: 8vh;
+}
+
+.redDiv {
+    background-color: rgba(237, 41, 57,0.6);
+}
+
+.redDiv:hover {
+    background-color: rgba(237, 41, 57,0.7);
+}
+
+.blueDiv {
+    background-color: rgba(124, 185, 232, 0.6);
+}
+
+.blueDiv:hover {
+    background-color: rgba(124, 185, 232, 0.7);
+}
+
+.restartdiv {
+    display: grid;
+    justify-content: center;
+}
+/*  rgba(85, 202, 85, 0.6 */
+@keyframes blueWon{
+    0%   {background-color: rgba(124, 185, 232, 0.6);}
+    25%  {background-color: rgba(120, 164, 197, 0.4);}
+    40%  {background-color: rgba(120, 164, 197, 0.3);}
+    50%  {background-color: rgba(85, 202, 85, 0.3);}
+    60%  {background-color: rgba(85, 202, 85, 0.4);}
+    70%  {background-color: rgba(85, 202, 85, 0.5);}
+    80%  {background-color: rgba(85, 202, 85, 0.6);}
+    100% {background-color: rgba(85, 202, 85, 0.7);}
+}
+
+@keyframes redWon{
+    0%   {background-color: rgba(237, 41, 57,0.7)}
+    25%  {background-color: rgba(192, 73, 83, 0.5)}
+    40%  {background-color: rgba(192, 92, 100, 0.3)}
+    50%  {background-color: rgba(85, 202, 85, 0.3);}
+    60%  {background-color: rgba(85, 202, 85, 0.4);}
+    80%  {background-color: rgba(85, 202, 85, 0.5);}
+    100% {background-color: rgba(85, 202, 85, 0.6);}
+}
+
+.redWon {
+    animation-name: redWon;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.blueWon {
+    animation-name: blueWon;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+dialog {
+    background-color: rgba(133, 220, 176,0.7);
+    border:none;
+    border-radius: 15px;
+    padding: 20px 30px;
+    text-align: center;
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+}
+
+dialog::backdrop {
+    background-color:rgba(195, 141, 158,0.6);
+}
+
+.inputdiv {
+    margin: 15px 0px;
+}
+.inputdiv > input {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    background-color: rgba(133, 220, 176,0.6);
+    color:rgba(53, 57, 53,0.8);
+    border-bottom: 2px solid white;
+    opacity: 0.7;
+}
+
+.inputdiv > input:focus {
+    background-color: rgba(133, 220, 176,0.9);;
+
+    color:rgba(53, 57, 53,0.8);
+    opacity: 1;
+    padding: 6px;
+    margin:1px;
+    border-bottom: 1px solid white;
+    font-weight: bolder;
+}
+
+
+.inputdiv > input::placeholder {
+    font-weight: bold;
+    color:rgba(53, 57, 53,0.8);
+    text-align: center;
+}
+
+.formbtn {
+    border:none;
+    margin: 0px 5px;
+    border-radius: 15px 15px 15px 15px;
+    padding:5px 10px;
+    background-color: #2779a766;
+    color: rgb(250, 250, 250);
+    font-weight: bold;
+}
+
+.formbtn:hover {
+    transform: scale(1.1);
+    margin:0px 13px;
+    background-color: rgba(39, 121, 167,0.6);
+}
+
+.restart {
+    background-color: rgba(133, 220, 176,0.4);
+    /* #E8A87C
+    #C38D9E
+    #E27D60 
+    #41B3A3; */
+    padding: 10px 15px;
+    color: rgba(53, 57, 53,0.8);;
+    margin: 15px;
+    border: none;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.restart:hover {
+    background-color: rgba(133, 220, 176,0.8);
+    font-weight: bold;
+    transform: scale(1.1);
+}

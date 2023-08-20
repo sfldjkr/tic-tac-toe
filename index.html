@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="./javascript.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <!-- A modal dialog containing a form -->
+    <div id="body">
+            <div class="dialogDiv">
+                <dialog id="favDialog">
+                    <form>
+                        <div class="inputdiv">
+                            <input type="text" name="playeronename" id="playeronename" placeholder="Player One" required>
+
+                        </div>                        
+                        <div class="inputdiv">
+                            <input type="text" name="playetwoname" id="playertwoname" placeholder="Player Two" required>
+                        </div>
+                        <button class="formbtn" id="confirmBtn" value="default">Confirm</button>
+                    </form>
+                </dialog>
+            </div>
+
+            <div id="showanswer"></div>
+            <div id="gameBoard"></div>
+            <div class="restartdiv">
+                <button class="restart" style="display: none;">Restart</button>
+            </div>
+    </div>
+</body>
+</html>
